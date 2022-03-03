@@ -20,4 +20,4 @@ def 清理授权(参数steam根目录):
             print("清理完成")
 
     else:  # 如果不是正确的steam根目录
-        print("steam根目录错误请检查：配置文件.py")
+        print("steam根目录错误请检查：配置文件.ini")

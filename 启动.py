@@ -1,6 +1,9 @@
 import 清理授权模块
-import 配置文件
+import configparser
 
-清理授权模块.清理授权(配置文件.steam根目录)
+配置文件 = configparser.ConfigParser()
+配置文件.read('配置文件.ini', encoding='utf-8')
 
-input("按下 enter 键退出，其他任意键显示...\n")
+清理授权模块.清理授权(配置文件.get('目录', 'steam根目录'))
+
+input("按下 enter 键退出...\n")
