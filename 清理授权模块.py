@@ -14,8 +14,7 @@ def 清理授权(参数steam根目录):
         # 检查是否清理成功
         检查序列 = os.listdir(参数steam根目录)
         if "ssfn" in 检查序列:
-            print("清理失败请自行删除\n" + 参数steam根目录 + "\\" + "\n下的ssfn文件和\n"
-                  + 参数steam根目录 + "\\config\\" + "\n下的config.vdf")
+            print(f"清理失败请自行删除\n{参数steam根目录}\\\n下的ssfn文件和\n{参数steam根目录}\\config\\\n下的config.vdf")
         else:
             print("清理完成")
 
