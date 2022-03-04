@@ -2,15 +2,15 @@ import os
 
 
 def 清理授权(参数steam根目录):
-    if os.path.isfile(参数steam根目录 + "\\steam.exe"):  # 检查是不是正确的steam根目录
+    if os.path.isfile(f'{参数steam根目录}\\steam.exe'):  # 检查是不是正确的steam根目录
         # 清理ssfn
         序列 = os.listdir(参数steam根目录)  # 定义变量，文件夹下文件序列
         ssfn序列 = [i for i in 序列 if 'ssfn' in i]  # 找出序列中含ssfn的元素，组成新的序列
         for m in ssfn序列:  # 循环出新序列中的元素
-            os.remove(os.path.join(参数steam根目录 + "\\" + m))  # 删除新序列中元素的文件，指定文件路径
+            os.remove(os.path.join(f'{参数steam根目录}\\{m}'))
         # 清理config.vdf
-        if os.path.isfile(参数steam根目录 + "\\config\\config.vdf"):
-            os.remove(os.path.join(参数steam根目录 + "\\config\\config.vdf"))
+        if os.path.isfile(f'{参数steam根目录}\\config\\config.vdf'):
+            os.remove(os.path.join(f'{参数steam根目录}\\config\\config.vdf'))
         # 检查是否清理成功
         检查序列 = os.listdir(参数steam根目录)
         if "ssfn" in 检查序列:
